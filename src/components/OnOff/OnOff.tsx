@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 type OnOffPropsType = {
 
 }
+
 export const OnOff = (props: OnOffPropsType) => {
     let [on, setOn ] = useState(false)
 
@@ -41,3 +42,5 @@ export const OnOff = (props: OnOffPropsType) => {
         </div>
     );
 };
+
+// забыл запушить 5 урок
