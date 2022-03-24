@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Rating} from "./components/Rating/Rating";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
@@ -7,13 +7,15 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {OnOff} from "./components/OnOff/OnOff";
 
 function App() {
-    console.log('App rendering')
+    let [value,setValue]=useState(0)
+    let [collapsed, setCollapsed] = useState(true)
+
     return (
         <div className="App">
             {/*<PageTitle title={'This is APP component'}/>*/}
 
-            {/*<Accordion titleValue={'Menu'} collapsed={true}/>*/}
-            {/*<UncontrolledAccordion titleValue={'Menu'} />*/}
+            <Accordion titleValue={'Menu'} collapsed={true}/>
+            <UncontrolledAccordion titleValue={'Menu'} />
 
             <Rating value={1} />
             <UncontrolledRating />

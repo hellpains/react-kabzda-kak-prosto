@@ -9,7 +9,7 @@ export const Accordion = (props: AccordionPropsType) => {
     console.log('Accordion rendering')
     return (
         <div>
-            <AccordionTitle title={props.titleValue}/>
+            <AccordionTitle title={props.titleValue}/><button>TOGGLE</button>
             {!props.collapsed && <AccordionBody/>}
         </div>
     )

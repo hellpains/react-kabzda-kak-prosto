@@ -6,14 +6,19 @@ type UncontrolledAccordionPropsType = {
 
 export const UncontrolledAccordion = (props: UncontrolledAccordionPropsType) => {
     let [collapsed, setCollapsed] = useState(true)
-    console.log('UncontrolledAccordion rendering')
+
     return (
         <div>
-            <UncontrolledAccordionTitle title={props.titleValue}/><button onClick={()=>setCollapsed(!collapsed)}>TOGGLE</button>
+            <UncontrolledAccordionTitle title={props.titleValue}/>
+            <button onClick={()=>setCollapsed(!collapsed)}>TOGGLE</button>
             {!collapsed && <UncontrolledAccordionBody/>}
         </div>
     )
 }
+
+
+
+
 
 type UncontrolledAccordionTitlePropsType = {
     title: string
@@ -25,6 +30,10 @@ const UncontrolledAccordionTitle = (props: UncontrolledAccordionTitlePropsType) 
     console.log('UncontrolledAccordionTitle rendering')
     return <h3 >{props.title}</h3>
 }
+
+
+
+
 
 const UncontrolledAccordionBody = () => {
     console.log('UncontrolledAccordionBody rendering')

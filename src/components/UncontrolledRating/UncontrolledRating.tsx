@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 
 type UncontrolledRatingPropsType = {
-    // value: 0 | 1 | 2 | 3 | 4 | 5
+
 }
 
 export const UncontrolledRating = (props: UncontrolledRatingPropsType) => {
@@ -27,10 +27,7 @@ type StarPropsType = {
 }
 const Star = (props: StarPropsType) => {
     console.log('Star rendering')
-    if (props.selected) {
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }
+
+    return <span>{props.selected?  <b>star </b>:'star '}</span>
 }
 
