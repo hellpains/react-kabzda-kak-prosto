@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import   React, {useState} from 'react';
 import './App.css';
 import {Rating} from "./components/Rating/Rating";
 import {RatingType, UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
