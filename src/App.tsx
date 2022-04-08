@@ -1,4 +1,4 @@
-import   React, {useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Rating} from "./components/Rating/Rating";
 import {RatingType, UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
@@ -6,11 +6,12 @@ import {Accordion} from "./components/Accordion/Accordion";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {OnOff} from "./components/OnOff/OnOff";
+import {Select} from "./components/Select/Select";
 
 function App() {
-    let [ratingValue,setRatingValue]=useState<RatingType>(0)
+    let [ratingValue, setRatingValue] = useState<RatingType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState(true)
-    let [switchOn, setSwitchOn ] = useState(false)
+    let [switchOn, setSwitchOn] = useState(false)
 
     return (
         <div className="App">
@@ -26,17 +27,24 @@ function App() {
             {/*<UncontrolledAccordion titleValue={'Menu'} />*/}
 
 
-
             {/*<OnOff on={switchOn} onClick={setSwitchOn}/>*/}
-            <UncontrolledOnOff onClick={setSwitchOn}/>{switchOn.toString()}
+            {/*<UncontrolledOnOff onClick={setSwitchOn}/>{switchOn.toString()}*/}
+            <Select
+                items={[
+                    {title: 'Rus', id: 1},
+                    {title: 'Arbi', id: 2},
+                    {title: 'Adam', id: 3}
+                ]}
+                onChange={()=>{}}
+            />
         </div>
     );
 }
 
-type PageTitlePropsType={
-    title:string
+type PageTitlePropsType = {
+    title: string
 }
-const PageTitle = (props:PageTitlePropsType) => {
+const PageTitle = (props: PageTitlePropsType) => {
     console.log('AppTitle rendering')
     return <h1>{props.title}</h1>
 }

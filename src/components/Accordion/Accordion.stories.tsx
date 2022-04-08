@@ -7,14 +7,47 @@ export default {
     title: 'Accordion',
     component: Accordion,
 }
-const callback=action('accordion mode change event fired')
+const callback = action('accordion mode change event fired')
+const onClickCallback = action('some item was clicked')
 
-export const MenuCollapsedMode = () => <Accordion items={['1','2','3']} titleValue={'menu'} collapsed={true} onClick={callback}/>
-export const UsersUnCollapsedMode = () => <Accordion items={['Rus','Arbi','Adam']} titleValue={'users'} collapsed={false} onClick={callback}/>
+export const MenuCollapsedMode = () => {
+    return(
+        <Accordion items={[{title: '1', value: 1}]}
+                   titleValue={'menu'}
+                   collapsed={true}
+                   onChange={callback}
+                   onClick={onClickCallback}
+        />
+    )
+}
+export const UsersUnCollapsedMode = () => {
+    return (
+        <Accordion titleValue={'users'}
+                   collapsed={false}
+                   onChange={callback}
+                   items={[
+                       {title: 'Rus', value: 1},
+                       {title: 'Arbi', value: 2},
+                       {title: 'Adam', value: 3}
+                   ]}
+                   onClick={onClickCallback}
+        />
 
+    )
+}
 export const ModeChanging = () => {
     let [value, setValue] = useState<boolean>(false)
-    return <Accordion items={['Rus','Arbi','Adam']} titleValue={'users'} collapsed={value} onClick={() => setValue(!value)}/>
+    return <Accordion
+        titleValue={'users'}
+        collapsed={value}
+        onChange={() => setValue(!value)}
+        items={[
+            {title: 'Rus', value: 1},
+            {title: 'Arbi', value: 2},
+            {title: 'Adam', value: 3}
+        ]}
+        onClick={(value)=>{alert(`user with ID ${value} should be happy`)}}
+    />
 }
 
 
