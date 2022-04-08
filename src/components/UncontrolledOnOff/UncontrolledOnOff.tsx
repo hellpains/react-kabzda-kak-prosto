@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 
 type UncontrolledOnOffPropsType = {
-    onClick:(on:boolean)=>void
+    onClick: (on: boolean) => void
+    defaultValue?: boolean
 }
 
 export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
-    let [uncontrolledOn, setUncontrolledOn ] = useState(false)
+    let [uncontrolledOn, setUncontrolledOn] = useState(props.defaultValue ? props.defaultValue : false)
 
     const onOffStyle = {
         display: 'flex',
