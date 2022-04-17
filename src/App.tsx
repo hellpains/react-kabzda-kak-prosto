@@ -12,6 +12,7 @@ function App() {
     let [ratingValue, setRatingValue] = useState<RatingType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState(true)
     let [switchOn, setSwitchOn] = useState(false)
+    const [value,setValue]=useState('2');
 
     return (
         <div className="App">
@@ -29,13 +30,13 @@ function App() {
 
             {/*<OnOff on={switchOn} onClick={setSwitchOn}/>*/}
             {/*<UncontrolledOnOff onClick={setSwitchOn}/>{switchOn.toString()}*/}
-            <Select
+            <Select value={value}
                 items={[
-                    {title: 'Rus', id: 1},
-                    {title: 'Arbi', id: 2},
-                    {title: 'Adam', id: 3}
+                    {title: 'Rus', value: '1'},
+                    {title: 'Arbi', value: '2'},
+                    {title: 'Adam', value: '3'}
                 ]}
-                onChange={()=>{}}
+                onChange={setValue}
             />
         </div>
     );
