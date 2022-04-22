@@ -21,7 +21,6 @@ export const UncontrolledRatingSecret = (props: UncontrolledRatingPropsType) => 
     )
 }
 
-
 type StarPropsType = {
     selected: boolean
     setValue: () => void
