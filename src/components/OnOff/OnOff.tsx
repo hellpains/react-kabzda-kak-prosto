@@ -1,13 +1,12 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
+import {AccordionSecret} from "../Accordion/Accordion";
 
 type OnOffPropsType = {
     on: boolean
     onClick: (on: boolean) => void
 }
 
-export const OnOff: FC<OnOffPropsType> = ({on, onClick}) => {
-
-
+export const OnOffSecret: FC<OnOffPropsType> = ({on, onClick}) => {
     const onOffStyle = {
         display: 'flex',
         margin: '20px'
@@ -49,3 +48,6 @@ export const OnOff: FC<OnOffPropsType> = ({on, onClick}) => {
         </div>
     );
 };
+
+
+export const OnOff=React.memo(OnOffSecret)

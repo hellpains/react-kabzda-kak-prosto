@@ -25,19 +25,19 @@ function App() {
             {/*    titleValue={'Menu'}*/}
             {/*    collapsed={accordionCollapsed}*/}
             {/*    onClick={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>*/}
-            {/*<UncontrolledAccordion titleValue={'Menu'} />*/}
+            <UncontrolledAccordion titleValue={'Menu'} />
 
 
             {/*<OnOff on={switchOn} onClick={setSwitchOn}/>*/}
             {/*<UncontrolledOnOff onClick={setSwitchOn}/>{switchOn.toString()}*/}
-            <Select value={value}
-                items={[
-                    {title: 'Rus', value: '1'},
-                    {title: 'Arbi', value: '2'},
-                    {title: 'Adam', value: '3'}
-                ]}
-                onChange={setValue}
-            />
+            {/*<Select value={value}*/}
+            {/*    items={[*/}
+            {/*        {title: 'Rus', value: '1'},*/}
+            {/*        {title: 'Arbi', value: '2'},*/}
+            {/*        {title: 'Adam', value: '3'}*/}
+            {/*    ]}*/}
+            {/*    onChange={setValue}*/}
+            {/*/>*/}
         </div>
     );
 }

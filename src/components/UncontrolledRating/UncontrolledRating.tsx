@@ -7,7 +7,7 @@ type UncontrolledRatingPropsType = {
     onChange: (value: RatingType) => void
 }
 
-export const UncontrolledRating = (props: UncontrolledRatingPropsType) => {
+export const UncontrolledRatingSecret = (props: UncontrolledRatingPropsType) => {
     console.log('UncontrolledRatingRating rendering')
     let [value, setValue] = useState(props.defaultValue ? props.defaultValue : 0)
     return (
@@ -38,4 +38,4 @@ const Star = (props: StarPropsType) => {
         </span>
     )
 }
-
+export const UncontrolledRating=React.memo(UncontrolledRatingSecret)
