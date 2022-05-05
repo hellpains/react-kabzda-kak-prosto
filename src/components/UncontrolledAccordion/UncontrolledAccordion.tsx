@@ -5,7 +5,7 @@ type UncontrolledAccordionPropsType = {
     titleValue: string
 }
 
-export const UncontrolledAccordionSecret = (props: UncontrolledAccordionPropsType) => {
+export const UncontrolledAccordionContainer = (props: UncontrolledAccordionPropsType) => {
     // let [collapsed, setCollapsed] = useState(true)
     let [state, dispatch] = useReducer(reducer, {collapsed: false})
 
@@ -20,19 +20,19 @@ export const UncontrolledAccordionSecret = (props: UncontrolledAccordionPropsTyp
         </div>
     )
 }
-export const UncontrolledAccordion = React.memo(UncontrolledAccordionSecret)
+export const UncontrolledAccordion = React.memo(UncontrolledAccordionContainer)
 
 type UncontrolledAccordionTitlePropsType = {
     title: string
     onClick: () => void
 }
 
-const UncontrolledAccordionTitleSecret = (props: UncontrolledAccordionTitlePropsType) => {
+const UncontrolledAccordionTitleContainer = (props: UncontrolledAccordionTitlePropsType) => {
     return <h3 onClick={props.onClick}>{props.title}</h3>
 }
-export const UncontrolledAccordionTitle = React.memo(UncontrolledAccordionTitleSecret)
+export const UncontrolledAccordionTitle = React.memo(UncontrolledAccordionTitleContainer)
 
-const UncontrolledAccordionBodySecret = () => {
+const UncontrolledAccordionBodyContainer = () => {
     console.log('UncontrolledAccordionBody rendering')
     return <ul>
         <li>1</li>
@@ -40,4 +40,4 @@ const UncontrolledAccordionBodySecret = () => {
         <li>3</li>
     </ul>
 }
-export const UncontrolledAccordionBody = React.memo(UncontrolledAccordionBodySecret)
+export const UncontrolledAccordionBody = React.memo(UncontrolledAccordionBodyContainer)

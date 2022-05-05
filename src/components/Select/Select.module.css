@@ -5,6 +5,7 @@
     min-width: 40px;
 }
 .items {
+    background-color: white;
     position: absolute;
     padding: 5px;
     border: 1px solid black

@@ -6,7 +6,7 @@ type RatingPropsType = {
     onClick: (value: RatingType) => void
 }
 
-export const RatingSecret = (props: RatingPropsType) => {
+export const RatingContainer = (props: RatingPropsType) => {
     console.log('Rating rendering')
 
     return (
@@ -19,7 +19,7 @@ export const RatingSecret = (props: RatingPropsType) => {
         </div>
     )
 }
-export const Rating = React.memo(RatingSecret)
+export const Rating = React.memo(RatingContainer)
 
 
 

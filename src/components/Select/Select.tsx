@@ -1,5 +1,6 @@
 import React, {useState, KeyboardEvent, useEffect} from "react";
 import s from './Select.module.css'
+import {RatingContainer} from "../Rating/Rating";
 
 type ItemType = {
     title: string
@@ -12,7 +13,7 @@ type SelectPropsType = {
     items: Array<ItemType>
 }
 
-export const SelectSecret = (props: SelectPropsType) => {
+export const SelectContainer = (props: SelectPropsType) => {
     const [active, setActive] = useState<boolean>(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
 
@@ -53,7 +54,7 @@ export const SelectSecret = (props: SelectPropsType) => {
     return (
         <>
 
-            <div className={s.select} onKeyUp={onKeyUp} tabIndex={0}>
+            <div className={s.select} onKeyUp={onKeyUp} tabIndex={0} onBlur={toggleItems}>
 
                 <span className={s.main} onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
                 {
@@ -78,4 +79,4 @@ export const SelectSecret = (props: SelectPropsType) => {
         </>
     )
 }
-export const Select=React.memo(SelectSecret)
+export const Select=React.memo(SelectContainer)
