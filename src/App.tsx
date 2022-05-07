@@ -19,14 +19,15 @@ function App() {
             {/*<PageTitle title={'This is APP component'}/>*/}
 
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+
             {/*<UncontrolledRating />*/}
 
             {/*<Accordion*/}
             {/*    titleValue={'Menu'}*/}
             {/*    collapsed={accordionCollapsed}*/}
             {/*    onClick={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>*/}
-            <UncontrolledAccordion titleValue={'Menu'} />
 
+            {/*<UncontrolledAccordion titleValue={'Menu'} />*/}
 
             {/*<OnOff on={switchOn} onClick={setSwitchOn}/>*/}
             {/*<UncontrolledOnOff onClick={setSwitchOn}/>{switchOn.toString()}*/}
