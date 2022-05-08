@@ -61,7 +61,7 @@ export const SetTimeoutExample = () => {
             <>
                 Hello, counter: {counter} fake: {fake}
                 {/*<button onClick={() => {setCounter(counter + 1)}}>+</button>*/}
-                {/*<button onClick={() => {setFake(fake + 1)}}>+</button>*/}
+                <button onClick={() => {setFake(fake + 1)}}>+</button>
             </>
         </>
     )
