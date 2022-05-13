@@ -68,24 +68,5 @@ export const SetTimeoutExample = () => {
 }
 
 
-export const Timer = () => {
-    const [timer, setTimer] = useState<Date>();
 
-    console.log('SetTimeoutExample')
-
-
-    useEffect(() => {
-
-        setInterval(() => {
-            setTimer(new Date())
-        }, 1000)
-
-    }, [])
-
-    return (
-        <>
-            Time: {timer?.toLocaleTimeString()}
-        </>
-    )
-}
 
